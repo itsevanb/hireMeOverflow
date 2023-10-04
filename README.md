@@ -48,3 +48,20 @@ npm install
 
 # Fire up the dev server
 npm run dev
+
+## How to Use 🚀
+
+Once everything's set, open your browser and head to `http://localhost:3000`. Take it for a spin!
+
+## Contribute 🤝
+
+Fancy contributing? Great! Here's how:
+
+1. Fork the repo.
+2. Create a new branch.
+3. Make your changes.
+4. Open a pull request.
+
+## License 📝
+
+This project is licensed under the MIT License.
