@@ -4,7 +4,7 @@
 
 Hello, world! 👋 Welcome to **hireMe overflow**, where coding questions meet job opportunities. Think of it as your virtual coffee shop ☕ for tech talks and career moves. We're built on TypeScript, React, Tailwind CSS, Next.js, and MongoDB, aiming to be your go-to place for all things dev.
 
-A Next.js course presented by [JSM](https://www.jsmastery.pro/)
+A Next.js course presented by [JSMastery](https://www.jsmastery.pro/)
 
 ⚠️ **Note: We're still under construction, so pardon our dust!** ⚠️
 
