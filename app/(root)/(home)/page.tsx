@@ -71,6 +71,7 @@ export default function Home() {
       <HomeFilters />
 
       <div className="mt-10 flex w-full flex-col gap-6">
+        {/* Looping through questions */}
         {questions.length > 0 ?
           questions.map((question) => (
             <QuestionCard 
