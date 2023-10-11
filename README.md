@@ -16,6 +16,7 @@ A Next.js course presented by [JSMastery](https://www.jsmastery.pro/)
 - [How to Use 🚀](#how-to-use-)
 - [Contribute 🤝](#contribute-)
 - [License 📝](#license-)
+- [Project Visuals 🖼️](#project-visuals-)
 
 ## Features 🎉
 
@@ -34,6 +35,13 @@ A Next.js course presented by [JSMastery](https://www.jsmastery.pro/)
 - Next.js
 - MongoDB
 
+## Project Visuals 🖼️
+
+<p align="center">
+  <img src="/building/proj.png" alt="Project Screenshot 1" width="400" />
+  <img src="/building/proj2.png" alt="Project Screenshot 2" width="400" />
+</p>
+
 ## How to Install 🔧
 
 Ready to roll up your sleeves? Here's how to set up the project:
@@ -51,6 +59,7 @@ npm install
 # Fire up the dev server
 npm run dev
 ```
+
 
 ## How to Use 🚀
 
