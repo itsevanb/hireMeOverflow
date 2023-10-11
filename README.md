@@ -58,6 +58,7 @@ npm install
 
 # Fire up the dev server
 npm run dev
+```
 
 
 ## How to Use 🚀
