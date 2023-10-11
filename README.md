@@ -34,6 +34,10 @@ A Next.js course presented by [JSMastery](https://www.jsmastery.pro/)
 - Next.js
 - MongoDB
 
+## Homepage Visuals
+![Screenshot](/building/proj.png)
+
+
 ## How to Install 🔧
 
 Ready to roll up your sleeves? Here's how to set up the project:
