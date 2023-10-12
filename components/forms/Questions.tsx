@@ -130,12 +130,11 @@ const Question = ({ mongoUserId }: Props) => {
               <FormControl className="mt-3.5">
               <Editor
                 apiKey={process.env.NEXT_PUBLIC_TINY_EDITOR_API_KEY}
-                onInit={(evt, editor) => {
-                  // @ts-ignore
+                onInit={(evt: any, editor: any) => {
                   editorRef.current = editor
                 }}
                 onBlur={field.onBlur}
-                onEditorChange={(content) => field.onChange(content)}
+                onEditorChange={(content: string) => field.onChange(content)}
                 initialValue=""
                 init={{
                   height: 350,
