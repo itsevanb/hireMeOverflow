@@ -11,7 +11,6 @@ import Link from "next/link";
 // Nextjs server request at the top of the component
 export default async function Home() {
   const result = await getQuestions({});
-  console.log(result.questions)
 
   return (
     <>
