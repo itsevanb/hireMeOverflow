@@ -8,7 +8,7 @@ const Page = async () => {
   // const { userId } = auth();
   const userId = 'clerk12345'
 
-  if (!userId) redirect('/login');
+  if (!userId) redirect('/sign-in');
 
   const mongoUser = await getUserById({ userId });
 
