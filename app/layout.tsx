@@ -44,13 +44,13 @@ export default function RootLayout({
           <meta property="og:description" content="A community-driven platform for asking and answering programming questions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="Your Website URL here" />
-          <meta property="og:image" content="/path/to/your/image.jpg" />
+          <meta property="og:image" content="/building/proj3.png" />
 
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="hireMeOverflow" />
           <meta name="twitter:description" content="A community-driven platform for asking and answering programming questions." />
-          <meta name="twitter:image" content="/path/to/your/image.jpg" />
+          <meta name="twitter:image" content="/building/proj3.png" />
         </Head>
         <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
           <ClerkProvider
