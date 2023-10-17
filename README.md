@@ -16,6 +16,7 @@ A Next.js course presented by [JSMastery](https://www.jsmastery.pro/)
 - [How to Use 🚀](#how-to-use-)
 - [Contribute 🤝](#contribute-)
 - [License 📝](#license-)
+- [Deployment 🌐](deplyment-) 
 - [Project Visuals 🖼️](#project-visuals-)
 
 ## Features 🎉
@@ -64,6 +65,10 @@ npm run dev
 ## How to Use 🚀
 
 Once everything's set, open your browser and head to `http://localhost:3000`. Take it for a spin!
+
+## Deployment 🌐
+See an early version of deployment while I build
+[hireMe Overflow](https://hire-me-overflow-o77k4w3x0-itsevanb.vercel.app/)
 
 ## Contribute 🤝
 
