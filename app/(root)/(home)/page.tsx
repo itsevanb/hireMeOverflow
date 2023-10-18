@@ -59,7 +59,7 @@ export default async function Home() {
           ))
           : <NoResult 
             title="There’s no question to show"
-            description="Be the first to break the silence! Ask a Question and kickstart the discussion. our query could be the next big thing others learn from. Get involved!"
+            description="Be the first to break the silence, Ask a Question and kickstart the discussion! 🚀"
             link="/ask-question"
             linkTitle="Ask a Question"
           />}
