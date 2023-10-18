@@ -74,7 +74,7 @@ export async function POST(req: Request) {
   if(eventType === 'user.updated') {
     const { id, email_addresses, image_url, username, first_name, last_name } = evt.data;
 
-    // Create a new user in your database
+    // Update a new user in your database
     const mongoUser = await updateUser({
       clerkId: id,
       updateData: {
