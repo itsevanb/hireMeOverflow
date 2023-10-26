@@ -1,9 +1,12 @@
+import { getQuestionById } from '@/lib/actions/question.action';
 import React from 'react'
 
-const page = () => {
+const Page = async ({ params, searchParams }) => {
+  const result = await getQuestionById({ questionId: params.id });
+
   return (
-    <div>page</div>
+    <div>{result.title}</div>
   )
 }
 
-export default page
+export default Page
