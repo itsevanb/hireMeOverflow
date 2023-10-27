@@ -5,6 +5,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import type { Metadata } from 'next';
 
 import './globals.css';
+import '../styles/prism.css';
 import { ThemeProvider } from '@/context/ThemeProvider';
 import Head from 'next/head';
 
