@@ -1,4 +1,5 @@
 import Answer from '@/components/forms/Answer';
+import AllAnswers from '@/components/shared/AllAnswers';
 import Metric from '@/components/shared/Metric';
 import ParseHTML from '@/components/shared/ParseHTML';
 import RenderTag from '@/components/shared/RenderTag';
@@ -11,7 +12,6 @@ import Link from 'next/link';
 import React from 'react'
 
 const Page = async ({ params, searchParams }) => {
-  const result = await getQuestionById({ questionId: params.id });
   const { userId: clerkId } = auth();
 
   let mongoUser; 
@@ -19,6 +19,8 @@ const Page = async ({ params, searchParams }) => {
   if(clerkId) {
     mongoUser = await getUserById({ userId: clerkId })
   }
+
+  const result = await getQuestionById({ questionId: params.id });
 
   return (
     <>
@@ -82,6 +84,12 @@ const Page = async ({ params, searchParams }) => {
         />
       ))}
     </div>
+
+    <AllAnswers 
+    questionId={result._id}
+    userId={JSON.stringify(mongoUser._id)}
+    totalAnswers={result.answers.length}
+    />
 
     <Answer 
     question={result.content}
