@@ -137,14 +137,19 @@ const Votes = ({
             </div>
         </div>
 
+        {type === 'Question' && (
         <Image 
-                src={hasSaved ? '/assets/icons/star-filled.svg' : '/assets/icons/star-red.svg'}
-                width={18}
-                height={18}
-                alt="star"
-                className="cursor-pointer"
-                onClick={handleSave}
-                />
+          src={hasSaved
+            ? '/assets/icons/star-filled.svg'
+            : '/assets/icons/star-red.svg'
+          }
+          width={18}
+          height={18}
+          alt="star"
+          className="cursor-pointer"
+          onClick={handleSave}
+        />
+      )}
     </div>
   )
 }
