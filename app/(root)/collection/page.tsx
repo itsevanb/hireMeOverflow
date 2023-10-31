@@ -1,16 +1,21 @@
 import QuestionCard from "@/components/cards/QuestionCard";
-import HomeFilters from "@/components/home/HomeFilters";
 import Filter from "@/components/shared/Filter";
 import NoResult from "@/components/shared/NoResult";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
-import { Button } from "@/components/ui/button";
-import { HomePageFilters, QuestionFilters } from "@/constants/filters";
-import { getQuestions } from "@/lib/actions/question.action";
-import Link from "next/link";
+import { QuestionFilters } from "@/constants/filters";
+import { getSavedQuestions } from "@/lib/actions/user.action";
+import { auth } from '@clerk/nextjs'
+
 
 // Nextjs server request at the top of the component
 export default async function Home() {
-  const result = await getQuestions({});
+  const { userId } = auth();
+
+  if(!userId) return null;
+
+  const result = await getSavedQuestions({
+    clerkId: userId,
+  });
 
   return (
     <>
