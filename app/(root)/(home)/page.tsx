@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     siteName: 'Next.js',
     images: [
       {
-        url: 'https://hire-me-overflow.vercel.app/stuff/meta-tags.png',
+        url: 'https://hire-me-overflow.vercel.app/meta-tags.png',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://hire-me-overflow.vercel.app/stuff/meta-tags.png',
+        url: 'https://hire-me-overflow.vercel.app/meta-tags.png',
         width: 1800,
         height: 1600,
         alt: 'hireMeOverflow Logo',
