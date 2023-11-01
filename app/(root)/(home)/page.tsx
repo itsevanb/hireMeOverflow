@@ -13,44 +13,6 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
   description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
-  itunes: {
-    appId: 'evanj.betley@gmail.com',
-  },
-  appleWebApp: {
-    title: 'hireMeOverflow',
-    statusBarStyle: 'black-translucent',
-    startupImage: [
-      'images/meta-tags.png',
-      {
-        url: 'images/meta-tags.png',
-        media: '(device-width: 768px) and (device-height: 1024px)',
-      },
-    ],
-  },
-  twitter: {
-    card: 'app',
-    title: 'hireMeOverflow',
-    description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.',
-    siteId: '1467726470533754880',
-    creator: '@Itsevanb',
-    creatorId: '1467726470533754880',
-    images: {
-      url: 'images/meta-tags.png',
-      alt: 'Site Logo',
-    },
-    app: {
-      name: 'twitter_app',
-      id: {
-        iphone: 'twitter_app://iphone',
-        ipad: 'twitter_app://ipad',
-        googleplay: 'twitter_app://googleplay',
-      },
-      url: {
-        iphone: 'https://hire-me-overflow.vercel.app/',
-        ipad: 'https://hire-me-overflow.vercel.app/',
-      },
-    },
-  },
 }
 
 // Nextjs server request at the top of the component
