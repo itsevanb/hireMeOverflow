@@ -12,7 +12,58 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
-  description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
+  description: 'A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.',
+  icons: {
+    icon: '/assets/images/site-logo.svg'
+  },
+  openGraph: {
+    title: 'hireMeOverflow',
+    description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.',
+    url: 'https://hire-me-overflow.vercel.app/',
+    siteName: 'hireMeOverflow',
+    images: [
+      {
+        url: 'https://hire-me-overflow.vercel.app/assets/images/meta.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://hire-me-overflow.vercel.app/assets/images/meta.png',
+        width: 1800,
+        height: 1600,
+        alt: 'hireMeOverflow Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  itunes: {
+    appId: 'evanj.betley@gmail.com',
+  },
+  appleWebApp: {
+    title: 'hireMeOverflow',
+    statusBarStyle: 'black-translucent',
+    startupImage: [
+      'https://hire-me-overflow.vercel.app/assets/images/meta.png',
+      {
+        url: 'https://hire-me-overflow.vercel.app/',
+        media: '(device-width: 768px) and (device-height: 1024px)',
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "hireMeOverflow",
+    description: "hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.",
+    creator: "@Itsevanb",
+    images:
+      {
+        url: "https://hire-me-overflow.vercel.app/assets/images/meta.png",
+        alt: "hireMeOverflow Logo",
+        width: 1200,
+        height: 630,
+      },
+  },
 }
 
 // Nextjs server request at the top of the component
