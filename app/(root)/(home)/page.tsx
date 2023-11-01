@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
     <>
-    
+    <head>
     <title>Home | hireMeOverflow</title>
     <meta name="title" content="Home | hireMeOverflow" />
     <meta name="description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
@@ -39,7 +39,10 @@ export default async function Home() {
     <meta property="twitter:title" content="Home | hireMeOverflow" />
     <meta property="twitter:description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
     <meta property="twitter:image" content="images/meta-tags.png" />
+    </head>
+      
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
+
         <h1 className="h1-bold text-dark100_light900">All Questions</h1> 
 
         <Link href="/ask-question" className="flex justify-end max-sm:w-full">
