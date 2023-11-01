@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
   description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
   itunes: {
-    appId: 'evanj.betley@gmail/com',
+    appId: 'evanj.betley@gmail.com',
   },
   appleWebApp: {
     title: 'hireMeOverflow',
