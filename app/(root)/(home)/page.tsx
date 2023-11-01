@@ -35,7 +35,7 @@ export default async function Home() {
 
     
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:url" content="https://hire-me-overflow-i0r2q7tfh-itsevanb.vercel.app/" />
     <meta property="twitter:title" content="Home | hireMeOverflow" />
     <meta property="twitter:description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
     <meta property="twitter:image" content="/images/meta-tags.png" />
