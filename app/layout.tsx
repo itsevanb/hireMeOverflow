@@ -48,6 +48,20 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  itunes: {
+    appId: 'evanj.betley@gmail.com',
+  },
+  appleWebApp: {
+    title: 'hireMeOverflow',
+    statusBarStyle: 'black-translucent',
+    startupImage: [
+      'https://hire-me-overflow.vercel.app/assets/images/meta.png',
+      {
+        url: 'https://hire-me-overflow.vercel.app/',
+        media: '(device-width: 768px) and (device-height: 1024px)',
+      },
+    ],
+  },
 }
  
 
