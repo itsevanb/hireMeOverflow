@@ -3,6 +3,7 @@ import React from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import '../styles/prism.css';
@@ -65,6 +66,7 @@ export default function RootLayout({
             <ThemeProvider>
               {children}
             </ThemeProvider>
+            <Analytics />
           </ClerkProvider>
         </body>
       </html>
