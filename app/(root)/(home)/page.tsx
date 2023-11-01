@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     title: 'hireMeOverflow',
     statusBarStyle: 'black-translucent',
     startupImage: [
-      '/images/meta-tags.png',
+      'images/meta-tags.png',
       {
-        url: '/images/meta-tags.png',
+        url: 'images/meta-tags.png',
         media: '(device-width: 768px) and (device-height: 1024px)',
       },
     ],
