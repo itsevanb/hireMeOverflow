@@ -26,7 +26,28 @@ export const metadata: Metadata = {
   description: 'A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.',
   icons: {
     icon: '/assets/images/site-logo.svg'
-  }
+  },
+  openGraph: {
+    title: 'hireMeOverflow',
+    description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.',
+    url: 'https://hire-me-overflow.vercel.app/',
+    siteName: 'hireMeOverflow',
+    images: [
+      {
+        url: 'https://hire-me-overflow.vercel.app/meta.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://hire-me-overflow.vercel.app/meta.png',
+        width: 1800,
+        height: 1600,
+        alt: 'hireMeOverflow Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
  
 
