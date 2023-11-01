@@ -14,18 +14,18 @@ export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
   description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
   openGraph: {
-    title: 'Next.js',
+    title: 'hireMeOverflow',
     description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.',
     url: 'https://hire-me-overflow.vercel.app/',
-    siteName: 'Next.js',
+    siteName: 'hireMeOverflow',
     images: [
       {
-        url: 'https://hire-me-overflow.vercel.app/meta-tags.png',
+        url: 'https://hire-me-overflow.vercel.app/meta.png',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://hire-me-overflow.vercel.app/meta-tags.png',
+        url: 'https://hire-me-overflow.vercel.app/meta.png',
         width: 1800,
         height: 1600,
         alt: 'hireMeOverflow Logo',
