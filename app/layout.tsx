@@ -67,14 +67,13 @@ export const metadata: Metadata = {
     title: "hireMeOverflow",
     description: "hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.",
     creator: "@Itsevanb",
-    images: [
+    images:
       {
         url: "https://hire-me-overflow.vercel.app/assets/images/meta.png",
         alt: "hireMeOverflow Logo",
         width: 1200,
         height: 630,
-      }
-    ],
+      },
   },
 }
  
