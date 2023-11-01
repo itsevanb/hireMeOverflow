@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     siteName: 'hireMeOverflow',
     images: [
       {
-        url: 'https://hire-me-overflow.vercel.app/meta.png',
+        url: 'https://hire-me-overflow.vercel.app/assets/images/meta.png',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://hire-me-overflow.vercel.app/meta.png',
+        url: 'https://hire-me-overflow.vercel.app/assets/images/meta.png',
         width: 1800,
         height: 1600,
         alt: 'hireMeOverflow Logo',
