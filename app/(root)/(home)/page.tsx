@@ -13,9 +13,27 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
   description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
-  icons: {
-    icon: '/stuff/meta-tags.png'
-  }
+  openGraph: {
+    title: 'Next.js',
+    description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions.',
+    url: 'https://hire-me-overflow.vercel.app/',
+    siteName: 'Next.js',
+    images: [
+      {
+        url: 'https://hire-me-overflow.vercel.app/stuff/meta-tags.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://hire-me-overflow.vercel.app/stuff/meta-tags.png',
+        width: 1800,
+        height: 1600,
+        alt: 'hireMeOverflow Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 // Nextjs server request at the top of the component
