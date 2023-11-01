@@ -13,6 +13,20 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
   description: 'hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them.',
+  itunes: {
+    appId: 'evanj.betley@gmail/com',
+  },
+  appleWebApp: {
+    title: 'hireMeOverflow',
+    statusBarStyle: 'black-translucent',
+    startupImage: [
+      '/images/meta-tags.png',
+      {
+        url: '/images/meta-tags.png',
+        media: '(device-width: 768px) and (device-height: 1024px)',
+      },
+    ],
+  },
 }
 
 // Nextjs server request at the top of the component
@@ -21,26 +35,6 @@ export default async function Home() {
 
   return (
     <>
-    <head>
-    <title>Home | hireMeOverflow</title>
-    <meta name="title" content="Home | hireMeOverflow" />
-    <meta name="description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
-
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hire-me-overflow-i0r2q7tfh-itsevanb.vercel.app/" />
-    <meta property="og:title" content="Home | hireMeOverflow" />
-    <meta property="og:description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
-    <meta property="og:image" content="images/meta-tags.png" />
-
-    
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://hire-me-overflow-i0r2q7tfh-itsevanb.vercel.app/" />
-    <meta property="twitter:title" content="Home | hireMeOverflow" />
-    <meta property="twitter:description" content="hireMeOverflow is a Q&A platform for developers to share knowledge and build their careers. Peer to peer answers for all your coding questions. AI powered answers when you need them." />
-    <meta property="twitter:image" content="images/meta-tags.png" />
-    </head>
-      
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
 
         <h1 className="h1-bold text-dark100_light900">All Questions</h1> 
