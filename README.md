@@ -68,7 +68,7 @@ Once everything's set, open your browser and head to `http://localhost:3000`. Ta
 
 ## Deployment 🌐
 See an early version of deployment while I build
-[hireMe Overflow](https://hire-me-overflow-o77k4w3x0-itsevanb.vercel.app/)
+[hireMe Overflow](https://hire-me-overflow.vercel.app/)
 
 ## Contribute 🤝
 
