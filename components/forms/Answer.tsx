@@ -73,7 +73,7 @@ const handleCreateAnswer = async (values: z.infer<typeof AnswerSchema>) => {
         </Button>
       </div>
       <Form {...form}>
-        <form className="mt-6 flex w-full flex-col gap-10"
+        <form className="text-dark300_light700 mt-6 flex w-full flex-col gap-10"
         onSubmit={form.handleSubmit(handleCreateAnswer)}>
           <FormField
             control={form.control}

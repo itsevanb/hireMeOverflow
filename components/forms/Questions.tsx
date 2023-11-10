@@ -117,7 +117,7 @@ const Question = ({ mongoUserId, type, questionDetails }: Props) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex w-full flex-col gap-10">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="text-dark300_light700 flex w-full flex-col gap-10">
         <FormField
           control={form.control}
           name="title"
@@ -169,7 +169,7 @@ const Question = ({ mongoUserId, type, questionDetails }: Props) => {
                 }}
               />
               </FormControl>
-              <FormDescription className="body-regular mt-2.5 text-light-500">
+              <FormDescription className="body-regular mt-2.5 text-light-500 ">
                 Introduce the problem and expand on what you put in the title. Minimum 20 characters.
               </FormDescription>
               <FormMessage className="text-red-500" />
