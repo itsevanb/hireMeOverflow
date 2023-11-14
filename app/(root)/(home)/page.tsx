@@ -9,6 +9,7 @@ import { getQuestions } from "@/lib/actions/question.action";
 import Link from "next/link";
 
 import type { Metadata } from 'next';
+import { SearchParamsProps } from "@/types";
 
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
@@ -67,8 +68,10 @@ export const metadata: Metadata = {
 }
 
 // Nextjs server request at the top of the component
-export default async function Home() {
-  const result = await getQuestions({});
+export default async function Home({ searchParams }: SearchParamsProps) {
+  const result = await getQuestions({
+    searchQuery: searchParams.q,
+  });
 
   return (
     <>
