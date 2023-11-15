@@ -10,6 +10,7 @@ import Link from "next/link";
 
 import type { Metadata } from 'next';
 import { SearchParamsProps } from "@/types";
+import Pagination from "@/components/shared/Pagination";
 
 export const metadata: Metadata = {
   title: 'Home | hireMeOverflow',
@@ -72,6 +73,7 @@ export default async function Home({ searchParams }: SearchParamsProps) {
   const result = await getQuestions({
     searchQuery: searchParams.q,
     filter: searchParams.filter,
+    page: searchParams.page ? +searchParams.page : 1,
   });
 
   return (
@@ -126,6 +128,13 @@ export default async function Home({ searchParams }: SearchParamsProps) {
             link="/ask-question"
             linkTitle="Ask a Question"
           />}
+      </div>
+      <div className="mt-10">
+        <Pagination
+        // + is used to convert string to number
+        pageNumber={searchParams?.page ? +searchParams.page : 1}
+        isNext={result.isNext}
+        />
       </div>
     </>
   )

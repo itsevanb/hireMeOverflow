@@ -14,7 +14,10 @@ export async function getQuestions(params: GetQuestionsParams) {
   try {
     connectToDatabase();
 
-    const { searchQuery, filter } = params;
+    const { searchQuery, filter, page = 1, pageSize = 10 } = params;
+
+    // pagination - calculate the number of post to skip based on page number and page size
+    const skipAmount = (page - 1) * pageSize;
 
     // Mongoose query object
     const query: FilterQuery<typeof Question> = {};
@@ -45,9 +48,18 @@ export async function getQuestions(params: GetQuestionsParams) {
     const questions = await Question.find(query)
       .populate({ path: 'tags', model: Tag })
       .populate({ path: 'author', model: User })
+      .skip(skipAmount)
+      .limit(pageSize)
       .sort(sortOptions)
 
-    return { questions };
+    // determine how many pages there are in total
+    const totalQuestions = await Question.countDocuments(query);
+
+    const isNext = totalQuestions > skipAmount + questions.length;
+
+    // 100 questions and page size is 10, so 10 pages
+
+    return { questions, isNext };
   } catch (error) {
     console.log(error)
     throw error;
