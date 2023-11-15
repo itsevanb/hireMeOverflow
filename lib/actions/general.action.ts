@@ -59,10 +59,13 @@ export async function globalSearch(params: SearchParams) {
         throw new Error("Invalid search type");
       }
 
+      // dynamic variable search in mongoose
       const queryResults = await modelInfo.model
         .find({ [modelInfo.searchField]: regexQuery })
         .limit(8);
 
+      // map the results to the format we want
+      // using mongoose if else statements to determine the type of the result
       results = queryResults.map((item) => ({
         title:
           type === "answer"
