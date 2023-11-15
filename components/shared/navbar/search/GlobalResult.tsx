@@ -27,6 +27,7 @@ const GlobalResult = () => {
       setIsLoading(true);
 
       try {
+        // call to database to fetch everything related to the query
         const res = await globalSearch({ query: global, type })
 
         setResult(JSON.parse(res));
@@ -80,6 +81,7 @@ const GlobalResult = () => {
               result.map((item: any, index: number) => (
                 <Link
                   href={renderLink(item.type, item.id)}
+                  // merges every key to make it unique
                   key={item.type + item.id + index}
                   className="flex w-full cursor-pointer items-start gap-3 px-5 py-2.5 hover:bg-light-700/50 dark:bg-dark-500/50"
                 >
