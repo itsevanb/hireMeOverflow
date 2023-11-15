@@ -33,34 +33,43 @@ export async function getAnswers(params: GetAnswersParams) {
   try {
     connectToDatabase();
 
-    const { questionId, sortBy } = params;
+    const { questionId, sortBy, page = 1, pageSize = 10 } = params;
+
+    const skipAmount = (page - 1) * pageSize;
 
     let sortOptions = {};
 
     switch (sortBy) {
       case "highestUpvotes":
-        sortOptions = { upvotes: -1 };
+        sortOptions = { upvotes: -1 }
         break;
       case "lowestUpvotes":
-        sortOptions = { upvotes: 1 };
+        sortOptions = { upvotes: 1 }
         break;
       case "recent":
-        sortOptions = { createdAt: -1 };
+        sortOptions = { createdAt: -1 }
         break;
       case "old":
-        sortOptions = { createdAt: 1 };
+        sortOptions = { createdAt: 1 }
         break;
-      
+    
       default:
         break;
     }
 
-
     const answers = await Answer.find({ question: questionId })
       .populate("author", "_id clerkId name picture")
       .sort(sortOptions)
+      .skip(skipAmount)
+      .limit(pageSize);
 
-    return { answers };
+    const totalAnswer = await Answer.countDocuments({ 
+      question: questionId
+    })
+
+    const isNextAnswer = totalAnswer > skipAmount + answers.length;
+
+    return { answers, isNextAnswer };
   } catch (error) {
     console.log(error);
     throw error;

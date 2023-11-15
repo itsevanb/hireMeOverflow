@@ -32,6 +32,7 @@ export async function getAllTags(params: GetAllTagsParams) {
     connectToDatabase();
 
     const { searchQuery, filter, page = 1, pageSize = 10 } = params;
+    // if page is 2; 2 - 1 = 1; then 1 * 10 = 10; skip 10 documents and show next 10 documents
     const skipAmount = (page - 1) * pageSize;
 
     const query: FilterQuery<typeof Tag> = {};
