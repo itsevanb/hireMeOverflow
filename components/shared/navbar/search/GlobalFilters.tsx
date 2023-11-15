@@ -9,10 +9,13 @@ const GlobalFilters = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  // want to know if searching for questions, answers, users, or tags
   const typeParams = searchParams.get("type");
-  
+
+  // active is the current type of search
   const [active, setActive] = useState(typeParams || '')
 
+  // handleTypeClick is called when a user clicks on a type of search
   const handleTypeClick = (item: string) => {
     if(active === item) {
       setActive("");
@@ -45,7 +48,7 @@ const GlobalFilters = () => {
           <button
             type="button"
             key={item.value}
-            className={`light-border-2 small-medium :text-light-800 rounded-2xl px-5 py-2 capitalize dark:hover:text-primary-500
+            className={`light-border-2 small-medium rounded-2xl px-5 py-2 capitalize dark:text-light-800 dark:hover:text-primary-500
               ${active === item.value 
                 ? 'bg-primary-500 text-light-900'
                 : 'bg-light-700 text-dark-400 hover:text-primary-500 dark:bg-dark-500'
