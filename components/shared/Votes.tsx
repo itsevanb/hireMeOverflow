@@ -8,6 +8,7 @@ import { formatAndDivideNumber } from "@/lib/utils";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { toast } from "../ui/use-toast";
 
 interface Props {
     type: string;
@@ -65,8 +66,10 @@ const Votes = ({
             })
           }
     
-          // todo: show a toast
-          return;
+          return toast({
+            title: `Upvote ${!hasupVoted ? 'added' : 'removed'}`,
+            variant: !hasupVoted ? 'default' : 'destructive'
+          })
         }
     
         if(action === 'downvote') {
@@ -88,7 +91,10 @@ const Votes = ({
             })
           }
     
-          // todo: show a toast
+          return toast({
+            title: `Downvote ${!hasdownVoted ? 'added' : 'removed'}`,
+            variant: !hasdownVoted ? 'default' : 'destructive'
+          })
           
         }
       }
