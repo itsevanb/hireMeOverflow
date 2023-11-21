@@ -1,15 +1,63 @@
-/* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import JobCard from "@/components/cards/JobCard";
+import JobsFilter from "@/components/jobs/JobsFilter";
+import Pagination from "@/components/shared/Pagination";
 
-const page = () => {
-  return (
-    <div className="text-dark100_light900">
-      COMING SOON 😃
-        <br></br>
-        <br></br>
-        Finding a job is hard. Finding a job in tech is even harder. I am here to help. I am building a platform to help you find your next job in tech. We're still in the early stages of development, but I am working hard to get this ready for you. If you're interested in being a beta tester, please sign up below. I'll be in touch soon!
-    </div>
-  )
+import {
+  fetchCountries,
+  fetchJobs,
+  fetchLocation,
+} from "@/lib/actions/job.action";
+
+import { Job } from "@/types";
+
+interface Props {
+  searchParams: {
+    q: string;
+    location: string;
+    page: string;
+  };
 }
 
-export default page
+const Page = async ({ searchParams }: Props) => {
+  const userLocation = await fetchLocation();
+
+  const jobs = await fetchJobs({
+    query:
+      `${searchParams.q}, ${searchParams.location}` ??
+      `Software Engineer in ${userLocation}`,
+    page: searchParams.page ?? 1,
+  });
+
+  const countries = await fetchCountries();
+  const page = parseInt(searchParams.page ?? 1);
+
+  return (
+    <>
+      <h1 className='h1-bold text-dark100_light900'>Jobs</h1>
+      <div className='flex'>
+        <JobsFilter countriesList={countries} />
+      </div>
+
+      <section className='light-border mb-9 mt-11 flex flex-col gap-9 border-b pb-9'>
+        {jobs?.length > 0 ? (
+          jobs.map((job: Job) => {
+            if (job.job_title && job.job_title.toLowerCase() !== "undefined")
+              return <JobCard key={job.id} job={job} />;
+
+            return null;
+          })
+        ) : (
+          <div className='paragraph-regular text-dark200_light800 w-full text-center'>
+            Need to find a job? You will be able to soon, I have to find a good API first! <br />One that won&apos;t cost me an arm and a leg. 💼
+          </div>
+        )}
+      </section>
+
+      {jobs?.length > 0 && (
+        <Pagination pageNumber={page} isNext={jobs.length === 10} />
+      )}
+    </>
+  );
+};
+
+export default Page;
